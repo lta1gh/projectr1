@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="ru"> 
 <head> 
+    <link rel="stylesheet" href="styles.css"> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Главная - ProjectR1</title> 
@@ -17,35 +18,56 @@
                 <li><a href="index.html">Главная</a></li> 
                 <li><a href="about.html">О нас</a></li> 
                 <li><a href="contacts.html">Контакты</a></li> 
+                <li><a href="services.html"> Услуги</a></li>
             </ul> 
-        </nav> 
+        </nav>
+        <nav aria-label="Хлебные крошки"> 
+            <a href="index.html">Главная</a> → 
+            <span>Главная</span> 
+        </nav>
     </header> 
     <!-- Уникальное основное содержимое страницы --> 
     <main>
-        <h1>Добро пожаловать на наш сайт!</h1> 
+        <h1 align="center">Добро пожаловать на сайт ProjectR1!</h1> 
         <!-- Секция 1 с якорем --> 
         <section id="services"> 
-            <h2>Наши услуги</h2> 
-            <p>Описание предоставляемых услуг...</p> 
-            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы --> 
-        </section> 
+            <p align="center">Мы предоставляем услуги по разработке кода и дизайна для веб-страниц</p> 
+            <a href="#contacts">Заказать сайт!</a> <!-- Якорная ссылка внутри страницы --> 
+        </section> <hr color="DarkOrchid" size="2px" width="200%">
         <!-- Секция 2 с якорем --> 
-        <section id="portfolio"> 
-            <h2>Портфолио</h2> 
-            <p>Примеры наших работ...</p> 
+        <section id="steps">
+            <h2 align="center">Какие задачи мы выполняем?</h2>
+            <div class="tasks-container"> <!-- Новый контейнер -->
+                <div class="task-item"> <!-- Пункт 1 -->
+                    <h3>Программирование</h3>
+                    <img src="assets/imghtml.jpg" alt="Программирование" width="400" height="250">
+                    <p>Написание кода, обеспечивающего функционал страницы</p>
+                </div>
+                <div class="task-item"> <!-- Пункт 2 -->
+                    <h3>Дизайн</h3>
+                    <img src="assets/imgdesign.jpg" alt="Дизайн" width="400" height="250">
+                    <p>Создание неповторимого привлекательного дизайна</p>
+                </div>
+                <div class="task-item"> <!-- Пункт 3 -->
+                    <h3>Тестирование</h3>
+                    <img src="assets/imgtesting.png" alt="Тестирование" width="400" height="250">
+                    <p>Проверка работоспособности и надежности страницы</p>
+                </div>
+            </div>
         </section> 
         <!-- Секция 3 с якорем --> 
         <section id="contacts"> 
             <h2>Контактная информация</h2>
             <p>Телефон: +7 (123) 456-78-90</p>
             <p>E-mail: projectr1@examplemail.com</p>
+            <a href="contacts.html">Перейти на страницу с контактами</a> <!-- Ссылка на отдельную страницу --> 
+        
     </main> 
-            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу --> 
         </section> 
     <!-- Подвал сайта --> 
     <footer> 
-        <p>&copy; 2025 ProjectR1. Все права защищены.</p> 
-        <p>Телефон: +7 (123) 456-78-90</p> 
+        <p align="center">&copy; 2025 ProjectR1. Все права защищены.</p> 
+        <p align="center">Телефон: +7 (123) 456-78-90</p> 
     </footer> 
 </body> 
 </html> 

@@ -36,7 +36,7 @@ header {
     background: white;
     z-index: 1000;
     border-bottom: 2px solid DarkOrchid;
-    padding: 1rem 2rem;
+    /* Убрал padding: 1rem 2rem; - это создавало отступы */
 }
 
 footer {
@@ -51,7 +51,7 @@ footer {
 /* Основное содержимое */
 main {
     margin: 10px 1rem 10px; /* Отступы шапки и подвала */
-    max-width: 1200px;
+    /* Убрал max-width: 1200px; - это ограничивало ширину */
 }
 
 /* Расположение изображения и текста */
@@ -69,20 +69,8 @@ main {
     flex: 1;
     font-size: 20px;
 }
-/* Дополнительные стили для навигации */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* УДАЛИЛ конфликтующие стили для header и nav ul - они мешают Bootstrap */
 
-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 .tasks-container {
   display: flex;
   gap: 10rem;
@@ -109,3 +97,93 @@ nav ul {
     text-decoration: none;
     border-radius: 8px;
 }
+/* Кастомные стили для Bootstrap темы */
+
+:root {
+    --primary-color: DarkOrchid;
+}
+
+/* Кастомизация Bootstrap компонентов */
+.navbar-brand, .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+    
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #9932CC;
+    border-color: #9932CC;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+/* Анимации для карточек */
+.task-card {
+    transition: transform 0.5s;
+    border-color: var(--primary-color) !important;
+}
+
+.task-card:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Стили для хлебных крошек */
+.breadcrumb-custom {
+    background-color: rgba(153, 50, 204, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Кастомизация breadcrumb */
+.breadcrumb-item.active {
+    color: var(--primary-color);
+}
+
+/* Дополнительные кастомные стили */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Рамка для breadcrumbs */
+.breadcrumb-custom {
+    background-color: rgba(153, 50, 204, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    display: inline-flex; /* По размеру */
+}
+
+/* Убрать убогий слэш */
+.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    content: "▶"; /* Стрелка вместо слэша */
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+

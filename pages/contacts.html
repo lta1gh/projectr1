@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+
+<head> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Контакты - ProjectR1</title> 
+    <meta name="description" content="Краткое описание главной страницы вашего сайта"> 
+    <link rel="icon" href="../images/icons/favicon.ico" type="image/x-icon"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head> 
+
+<body> 
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-primary py-3">
+            <div class="container-fluid">
+                <div class="row align-items-center w-100">
+                    <!-- Логотип -->
+                    <div class="col text-start">
+                        <a class="navbar-brand fs-3" href="../index.html">ProjectR1</a>
+                    </div>
+                    
+                    <!-- Навигация -->
+                    <div class="col-6">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav justify-content-left w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">
+                                        <i class="bi bi-house-door"></i> Главная
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/about.html">
+                                        <i class="bi bi-info-circle"></i> О нас
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="../pages/contacts.html">
+                                        <i class="bi bi-telephone"></i> Контакты
+                                    </a>
+                                </li>
+                               <li class="nav-item">
+                                    <a class="nav-link" href="../pages/services.html">
+                                        <i class="bi bi-bag"></i> Услуги
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Breadcrumbs -->
+                    <div class="col text-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 breadcrumb-custom justify-content-end">
+                                <li class="breadcrumb-item"><a href="../index.html" style="color: darkorchid; text-decoration: none;">Главная</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 align="center">Наши контакты</h1> <hr color="DarkOrchid" size="2px" width="200%">
+        <!-- Кнопка открытия модалки --> 
+        <section> 
+            <h2>E-Mail</h2> 
+            <p>contact@projectr1.com</p> 
+        </section> 
+        <section> 
+            <h2>Телефон</h2> 
+            <p>+7 (123) 456-78-90</p> 
+        </section> 
+        <button id="openDialog" type="button">Написать нам</button> 
+        <!-- Модалка с формой --> 
+        <dialog id="contactDialog" aria-labelledby="dialogTitle"> 
+            <h2 id="dialogTitle">Обратная связь</h2> 
+            <form id="contactForm" method="dialog" novalidate> 
+                <label for="name">Имя</label> 
+                <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name"> 
+                <label for="email">E-mail</label> 
+                <input id="email" name="email" type="email" required autocomplete="email">
+                <label for="phone">Телефон</label> 
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"> 
+                <small id="phoneHelp">Формат: +7 (900) 000-00-00</small> 
+                <label for="date">Дата</label> 
+                <input id="date" name="date" type="date"> 
+                <label for="topic">Тема</label> 
+                <select id="topic" name="topic" required> 
+                    <option value="">Выберите тему</option> 
+                    <option>Вопрос</option> 
+                    <option>Заказ</option> 
+                </select>
+                <label for="message">Сообщение</label> 
+                <textarea id="message" name="message" rows="4" required></textarea> 
+                <div class="form-actions"> 
+                    <button type="button" id="closeDialog">Закрыть</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </dialog>
+    </main> 
+    <footer> 
+        <p align="center">&copy; 2025 ProjectR1. Все права защищены.</p> 
+        <p align="center">Телефон: +7 (123) 456-78-90</p> 
+    </footer> 
+</body> 
+</html> 

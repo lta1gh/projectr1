@@ -1,73 +1,156 @@
 <!DOCTYPE html> 
 <html lang="ru"> 
+
 <head> 
-    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Главная - ProjectR1</title> 
     <meta name="description" content="Краткое описание главной страницы вашего сайта"> 
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head> 
+
 <body> 
-    <!-- Шапка сайта --> 
-    <header> 
-        <a href="/">ProjectR1</a> 
-        <!-- Главное меню навигации --> 
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Главная</a></li> 
-                <li><a href="about.html">О нас</a></li> 
-                <li><a href="contacts.html">Контакты</a></li> 
-                <li><a href="services.html"> Услуги</a></li>
-            </ul> 
-        </nav>
-        <nav aria-label="Хлебные крошки"> 
-            <a href="index.html">Главная</a> → 
-            <span>Главная</span> 
-        </nav>
-    </header> 
-    <!-- Уникальное основное содержимое страницы --> 
-    <main>
-        <h1 align="center">Добро пожаловать на сайт ProjectR1!</h1> 
-        <!-- Секция 1 с якорем --> 
-        <section id="services"> 
-            <p align="center">Мы предоставляем услуги по разработке кода и дизайна для веб-страниц</p> 
-            <a href="#contacts">Заказать сайт!</a> <!-- Якорная ссылка внутри страницы --> 
-        </section> <hr color="DarkOrchid" size="2px" width="200%">
-        <!-- Секция 2 с якорем --> 
-        <section id="steps">
-            <h2 align="center">Какие задачи мы выполняем?</h2>
-            <div class="tasks-container"> <!-- Новый контейнер -->
-                <div class="task-item"> <!-- Пункт 1 -->
-                    <h3>Программирование</h3>
-                    <img src="assets/imghtml.jpg" alt="Программирование" width="400" height="250">
-                    <p>Написание кода, обеспечивающего функционал страницы</p>
-                </div>
-                <div class="task-item"> <!-- Пункт 2 -->
-                    <h3>Дизайн</h3>
-                    <img src="assets/imgdesign.jpg" alt="Дизайн" width="400" height="250">
-                    <p>Создание неповторимого привлекательного дизайна</p>
-                </div>
-                <div class="task-item"> <!-- Пункт 3 -->
-                    <h3>Тестирование</h3>
-                    <img src="assets/imgtesting.png" alt="Тестирование" width="400" height="250">
-                    <p>Проверка работоспособности и надежности страницы</p>
+    <!-- Шапка -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-primary py-3">
+            <div class="container-fluid">
+                <div class="row align-items-center w-100">
+                    <!-- Логотип -->
+                    <div class="col text-start">
+                        <a class="navbar-brand fs-3" href="index.html">ProjectR1</a>
+                    </div>
+                    
+                    <!-- Навигация -->
+                    <div class="col-6">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav justify-content-left w-100">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">
+                                        <i class="bi bi-house-door"></i> Главная
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/about.html">
+                                        <i class="bi bi-info-circle"></i> О нас
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/contacts.html">
+                                        <i class="bi bi-telephone"></i> Контакты
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/services.html">
+                                        <i class="bi bi-bag"></i> Услуги
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Breadcrumbs -->
+                    <div class="col text-end">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0 breadcrumb-custom justify-content-end">
+                                <li class="breadcrumb-item active"><a href="index.html" style="color: darkorchid; text-decoration: none;">Главная</a></li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </section> 
-        <!-- Секция 3 с якорем --> 
-        <section id="contacts"> 
-            <h2>Контактная информация</h2>
-            <p>Телефон: +7 (123) 456-78-90</p>
-            <p>E-mail: projectr1@examplemail.com</p>
-            <a href="contacts.html">Перейти на страницу с контактами</a> <!-- Ссылка на отдельную страницу --> 
-        
+        </nav>
+    </header>
+    <main class="container my-5">
+        <!-- Заголовок -->
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h1 class="display-4 mb-4">Добро пожаловать на сайт ProjectR1!</h1>
+            </div>
+        </div>
+
+        <!-- Секция услуг -->
+        <section id="services" class="row mb-5 pb-4 border-bottom border-2 border-primary">
+            <div class="col-12 text-center">
+                <p class="lead mb-4">Мы предоставляем услуги по разработке кода и дизайна для веб-страниц</p>
+                <a href="#contacts" class="btn btn-primary btn-lg px-4">Заказать сайт!</a>
+            </div>
+        </section>
+
+        <!-- Задчачи -->
+        <section id="steps" class="mb-5">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="display-5">Какие задачи мы выполняем?</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Карточка 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 task-card border-2 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title h4 mb-3">Программирование</h3>
+                            <img src="images/imghtml.jpg" class="card-img-top rounded mb-3" alt="Программирование">
+                            <p class="card-text">Написание кода, обеспечивающего функционал страницы</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 task-card border-2 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title h4 mb-3">Дизайн</h3>
+                            <img src="images/imgdesign.jpg" class="card-img-top rounded mb-3" alt="Дизайн">
+                            <p class="card-text">Создание неповторимого привлекательного дизайна</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 task-card border-2 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <h3 class="card-title h4 mb-3">Тестирование</h3>
+                            <img src="images/imgtesting.png" class="card-img-top rounded mb-3" alt="Тестирование">
+                            <p class="card-text">Проверка работоспособности и надежности страницы</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция контактов -->
+        <section id="contacts" class="row mb-5">
+            <div class="col-md-8 mx-auto">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title h3 mb-4">Контактная информация</h2>
+                        <div class="mb-3">
+                            <p class="mb-1"><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+                            <p class="mb-3"><strong>E-mail:</strong> contact@projectr1.com</p>
+                        </div>
+                        <a href="pages/contacts.html" class="btn btn-outline-primary">Перейти на страницу с контактами</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main> 
-        </section> 
-    <!-- Подвал сайта --> 
-    <footer> 
-        <p align="center">&copy; 2025 ProjectR1. Все права защищены.</p> 
-        <p align="center">Телефон: +7 (123) 456-78-90</p> 
+
+    <!-- Подвал сайта -->
+    <footer class="bg-light border-top border-2 border-primary py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2025 ProjectR1. Все права защищены.</p>
+            <p class="mb-0">Телефон: +7 (123) 456-78-90</p>
+        </div>
     </footer> 
 </body> 
-</html> 
+</html>

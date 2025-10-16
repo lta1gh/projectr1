@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Главная - ProjectR1</title> 
+    <meta name="description" content="Краткое описание главной страницы вашего сайта"> 
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
+</head> 
+<body> 
+    <!-- Шапка сайта --> 
+    <header> 
+        <a href="/">ProjectR1</a> 
+        <!-- Главное меню навигации --> 
+        <nav> 
+            <ul> 
+                <li><a href="index.html">Главная</a></li> 
+                <li><a href="about.html">О нас</a></li> 
+                <li><a href="contacts.html">Контакты</a></li> 
+                <li><a href="services.html"> Услуги</a></li>
+            </ul> 
+        </nav>
+        <nav aria-label="Хлебные крошки"> 
+            <a href="index.html">Главная</a> → 
+            <span>Главная</span> 
+        </nav>
+    </header> 
+    <!-- Уникальное основное содержимое страницы --> 
+    <main>
+        <h1 align="center">Добро пожаловать на сайт ProjectR1!</h1> 
+        <!-- Секция 1 с якорем --> 
+        <section id="services"> 
+            <p align="center">Мы предоставляем услуги по разработке кода и дизайна для веб-страниц</p> 
+            <a href="#contacts">Заказать сайт!</a> <!-- Якорная ссылка внутри страницы --> 
+        </section> <hr color="DarkOrchid" size="2px" width="130%">
+        <!-- Секция 2 с якорем --> 
+        <section id="steps">
+            <h2 align="center">Какие задачи мы выполняем?</h2>
+            <div class="tasks-container"> <!-- Новый контейнер -->
+                <div class="task-item"> <!-- Пункт 1 -->
+                    <h3>Программирование</h3>
+                    <img src="assets/imghtml.jpg" alt="Программирование" width="400" height="250">
+                    <p>Написание кода, обеспечивающего функционал страницы</p>
+                </div>
+                <div class="task-item"> <!-- Пункт 2 -->
+                    <h3>Дизайн</h3>
+                    <img src="assets/imgdesign.jpg" alt="Дизайн" width="400" height="250">
+                    <p>Создание неповторимого привлекательного дизайна</p>
+                </div>
+                <div class="task-item"> <!-- Пункт 3 -->
+                    <h3>Тестирование</h3>
+                    <img src="assets/imgtesting.png" alt="Тестирование" width="400" height="250">
+                    <p>Проверка работоспособности и надежности страницы</p>
+                </div>
+            </div>
+        </section> 
+        <!-- Секция 3 с якорем --> 
+        <section id="contacts"> 
+            <h2>Контактная информация</h2>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>E-mail: support@projectr1.com</p>
+            <a href="contacts.html">Перейти на страницу с контактами</a> <!-- Ссылка на отдельную страницу --> 
+        
+    </main> 
+        </section> 
+    <!-- Подвал сайта --> 
+    <footer> 
+        <p align="center">&copy; 2025 ProjectR1. Все права защищены.</p> 
+        <p align="center">Телефон: +7 (123) 456-78-90</p> 
+    </footer> 
+</body> 
+</html> 
